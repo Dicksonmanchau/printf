@@ -55,6 +55,9 @@ int _printf(const char *format, ...)
 					_putchar('%');
 					num_of_char++;
 					break;
+                                default:
+					_putchar(*format);
+					break;
 			}
 		}
 
@@ -65,4 +68,3 @@ int _printf(const char *format, ...)
 
 	return (num_of_char);
 }
-
