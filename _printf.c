@@ -9,6 +9,7 @@ int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
 	int num_of_char = 0;
+
 	va_list args_list;
 
 	if (format == NULL)
@@ -52,12 +53,16 @@ int _printf(const char *format, ...)
 					break;
 				}
 				case '%':
+				{
 					_putchar('%');
 					num_of_char++;
 					break;
-                                default:
+				}
+				default:
+				{
 					_putchar(*format);
 					break;
+				}
 			}
 		}
 
