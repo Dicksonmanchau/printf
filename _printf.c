@@ -60,8 +60,10 @@ int _printf(const char *format, ...)
 				}
 				default:
 				{
+					_putchar('%');
+					num_of_char++;
 					_putchar(*format);
-					break;
+					num_of_char++;
 				}
 			}
 		}
